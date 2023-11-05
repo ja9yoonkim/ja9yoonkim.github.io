@@ -9,7 +9,7 @@ profile:
   image: prof_pic.jpg
   image_circular: true # crops the image to make it circular
   more_info: >
-    <p>555 Management Building,</p>
+    <p>555 Management Bldg.,</p>
     <p>Xian’ning West Road 28,</p>
     <p>Xi'an, Shaanxi Province,</p>
     <p>P.R.China, 710049</p>
