@@ -7,7 +7,7 @@ subtitle: <a href='http://jinhe.xjtu.edu.cn'>Jinhe Center for Economic Research<
 profile:
   align: right
   image: prof_pic.jpg
-  image_circular: false # crops the image to make it circular
+  image_circular: true # crops the image to make it circular
   more_info: >
     <p>555 Management Building,</p>
     <p>Xian’ning West Road 28,</p>
