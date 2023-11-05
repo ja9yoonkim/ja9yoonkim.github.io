@@ -9,9 +9,10 @@ profile:
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>555 Management Building</p>
-    <p>Xian’ning West Road 28, Xi'an</p>
-    <p>Shaanxi Province, P.R.China, 710049</p>
+    <p>555 Management Building,</p>
+    <p>Xian’ning West Road 28,</p>
+    <p>Xi'an, Shaanxi Province,</p>
+    <p>P.R.China, 710049</p>
 
 news: true  # includes a list of news items
 latest_posts: true  # includes a list of the newest posts
