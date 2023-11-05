@@ -11,8 +11,8 @@ profile:
   more_info: >
     <p>555 Management Bldg.,</p>
     <p>Xian’ning West Road 28,</p>
-    <p>Xi'an, Shaanxi Province,</p>
-    <p>P.R.China, 710049</p>
+    <p>Xi'an,Shaanxi Province,</p>
+    <p>P.R.China,710049</p>
 
 news: true  # includes a list of news items
 latest_posts: true  # includes a list of the newest posts
