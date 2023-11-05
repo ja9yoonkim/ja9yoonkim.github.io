@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='http://jinhe.xjtu.edu.cn'> Jinhe Center for Economic Research </a>, <a href='http://www.xjtu.edu.cn'> Xi'an Jiaotong University </a>
+subtitle: <a href='http://jinhe.xjtu.edu.cn'>Jinhe Center for Economic Research</a>, <a href='http://www.xjtu.edu.cn'>Xi'an Jiaotong University</a>
 
 profile:
   align: right
