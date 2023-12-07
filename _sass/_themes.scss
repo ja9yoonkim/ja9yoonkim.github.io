@@ -48,9 +48,9 @@
 }
 
 html[data-theme='dark'] {
-  --global-bg-color: #{$black-color-lighter3};
+  --global-bg-color: #{$black-color-light};
   --global-code-bg-color: #{$code-bg-color-dark};
-  --global-text-color: #{$grey-color-light};
+  --global-text-color: #{$vanilla-color-ice1};
   --global-text-color-light: #{$grey-color-light};
   --global-theme-color: #{$red-color-light};
   --global-hover-color: #{$red-color-light};
