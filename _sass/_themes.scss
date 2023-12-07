@@ -48,10 +48,10 @@
 }
 
 html[data-theme='dark'] {
-  --global-bg-color: #{$black-color-light};
+  --global-bg-color: #{$Crow-color};
   --global-code-bg-color: #{$code-bg-color-dark};
-  --global-text-color: #{$vanilla-color-ice1};
-  --global-text-color-light: #{$grey-color-light};
+  --global-text-color: #{$vanilla-color-ice2};
+  --global-text-color-light: #{$vanilla-color-ice2};
   --global-theme-color: #{$red-color-light};
   --global-hover-color: #{$red-color-light};
   --global-hover-text-color: #{$white-color};
