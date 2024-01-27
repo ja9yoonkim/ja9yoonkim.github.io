@@ -2,7 +2,7 @@
 layout: about
 title: Home
 permalink: /
-subtitle: Assistant Professor of Economics, Xi'an Jiaotong University
+subtitle: Jinhe Center for Economic Research | Xi'an Jiaotong University
 
 profile:
   align: right
