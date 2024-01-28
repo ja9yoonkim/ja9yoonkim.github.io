@@ -4,8 +4,8 @@
 
 :root {
   --global-bg-color: #{$white-color};
-  --global-code-bg-color: #{$code-bg-color-light};
-  --global-text-color: #{$black-color};
+  --global-code-bg-color: #{$beige-dimmed}; /***** #{$code-bg-color-light}; *****/
+  --global-text-color: #{$navy-color2}; /***** #{$black-color}; *****/
   --global-text-color-light: #{$grey-color};
   --global-theme-color: #{$purple-color};
   --global-hover-color: #{$purple-color};
