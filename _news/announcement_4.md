@@ -8,14 +8,10 @@ related_posts: false
 
 **Abstract**
 
-***
-
 > The effects of an aging economy&mdash;an increase in longevity or a decrease in fertility rates&mdash;on the pension benefits within the different pension schemes are analyzed in a standard overlapping generations model with production process including automation capital. It is observed that the impact of increasing longevity is more pronounced than the one from the decreasing fertility rate across all the pension systems. While increasing longevity has a consistently negative impact on the pension benefits within all the pension systems, the impact of decreasing fertility rate is diverse according to the pension scheme. Since what is in common in our model economy is that low-skilled households are vulnerable to the aging impact, we consider policies to improve the households. It shows that the effects are different according to the pension schemes and demographic factors.
 
-***
-
-> **JEL Classification:** H23, H55, J11, J24  
-> **Keywords:** Overlapping Generations, Pension System, Automation, Demographic Change, Robot Taxes
+**JEL Classification:** H23, H55, J11, J24  
+**Keywords:** Overlapping Generations, Pension System, Automation, Demographic Change, Robot Taxes
 
 
 <!---
