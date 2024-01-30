@@ -6,7 +6,7 @@ inline: false
 related_posts: false
 ---
 
-Abstract
+**Abstract**
 
 ***
 
@@ -14,8 +14,8 @@ The effects of an aging economy&mdash;an increase in longevity or a decrease in 
 
 ***
 
-> JEL Classification: H23, H55, J11, J24  
-> Keywords: Overlapping Generations, Pension System, Automation, Demographic Change, Robot Taxes
+> **JEL Classification:** H23, H55, J11, J24  
+> **Keywords:** Overlapping Generations, Pension System, Automation, Demographic Change, Robot Taxes
 
 
 <!---
