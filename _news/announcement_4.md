@@ -14,6 +14,11 @@ The effects of an aging economy&mdash;an increase in longevity or a decrease in 
 
 ***
 
+> JEL Classification: H23, H55, J11, J24
+> Keywords: Overlapping Generations, Pension System, Automation, Demographic Change, Robot Taxes
+
+
+<!---
 Announcements and news can be much longer than just quick inline posts. In fact, they can have all the features available for the standard blog posts. See below.
 
 ***
@@ -38,3 +43,4 @@ Pug heirloom High Life vinyl swag, single-origin coffee four dollar toast taxide
 > —Anais Nin
 
 Fap aliqua qui, scenester pug Echo Park polaroid irony shabby chic ex cardigan church-key Odd Future accusamus. Blog stumptown sartorial squid, gastropub duis aesthetic Truffaut vero. Pinterest tilde twee, odio mumblecore jean shorts lumbersexual.
+--->
