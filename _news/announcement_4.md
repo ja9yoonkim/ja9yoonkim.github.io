@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  Pension Systems Revisited in the Age of Automation and a Greying Economy
-date:   2024
 inline: true
 related_posts: false
 ---
