@@ -1,6 +1,6 @@
 ---
 layout: post
-date: 2024-01-26
+<font size= "4"> date: 2024-01-26 </font>
 title:  Pension Systems Revisited in the Age of Automation and a Greying Economy
 author: Joint work with <a href="https://dwlee05.github.io">Dongwoo Lee</a>
 inline: false
