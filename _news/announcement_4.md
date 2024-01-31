@@ -1,7 +1,7 @@
 ---
 layout: post
 date: 2024-01-26
-title:  Pension Systems Revisited in the Age of Automation and a Greying Economy
+title:  Pension Systems Revisited in the Age of Automation and a Greying Economy (with Dongwoo Lee)
 inline: false
 related_posts: false
 ---
