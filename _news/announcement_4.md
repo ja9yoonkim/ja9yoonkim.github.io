@@ -2,7 +2,7 @@
 layout: post
 date: 2024-01-26
 title:  Pension Systems Revisited in the Age of Automation and a Greying Economy
-author: Joint work with <a href="https://dwlee05.github.io">Dongwoo Lee</a>
+author: \large Joint work with <a href="https://dwlee05.github.io">Dongwoo Lee</a>
 inline: false
 related_posts: false
 ---
