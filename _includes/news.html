@@ -19,7 +19,9 @@
                       <a class="news-title" href="{{ item.url | relative_url }}">{{ item.title }}</a>
                     {%- endif %}
                   </td>
-                  <td>{{ item.author }}</td>
+                </tr>
+                <tr>
+                    <td colspan="2">Author: {{ item.author }}</td>
                 </tr>
               {%- endfor %}
               </table>
