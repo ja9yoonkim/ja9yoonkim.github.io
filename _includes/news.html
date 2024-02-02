@@ -1,3 +1,10 @@
+<style>
+    .news-table td {
+        vertical-align: top; /* Adjust vertical alignment to align content at the top */
+        padding-bottom: 5px; /* Adjust the bottom padding to reduce space */
+    }
+</style>
+
           <div class="news">
             {% if site.news != blank -%}
             {%- assign news_size = site.news | size -%}
