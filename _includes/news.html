@@ -16,7 +16,7 @@
                     {% if item.inline -%}
                       {{ item.content | remove: '<p>' | remove: '</p>' | emojify }}
                     {%- else -%}
-                      <a class="news-title" href="{{ item.url | relative_url }}"><strong>{{ item.title }}</strong></a>
+                      <a class="news-title" href="{{ item.url | relative_url }}" style="color: #828282;"><strong>{{ item.title }}</strong></a>
                       <br>
                       <span style="color: #828282;">({{ item.author }})</span>
                     {%- endif %}
