@@ -24,7 +24,7 @@
                     {%- else -%}
                       <a class="news-title" href="{{ item.url | relative_url }}">{{ item.title }}</a>
                       <be>
-                      ({{ item.author }})
+                      <span style="color:grey;">({{ item.author }})</span>
                     {%- endif %}
                   </td>
                 </tr>
