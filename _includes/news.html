@@ -1,3 +1,9 @@
+<style>
+    .news-table tr.news-item {
+        margin-bottom: 3px; /* Adjust the margin-bottom to reduce space between rows */
+    }
+</style>
+
           <div class="news">
             {% if site.news != blank -%}
             {%- assign news_size = site.news | size -%}
