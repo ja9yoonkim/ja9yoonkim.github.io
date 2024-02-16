@@ -9,7 +9,7 @@ related_posts: false
 
 ***
 
-[Access the manuscript](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4723921) asdasdasdasdasd
+<a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4723921">Access the manuscript</a>
 
 ***
 
