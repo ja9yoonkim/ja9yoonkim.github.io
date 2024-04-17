@@ -1,8 +1,9 @@
 ---
 layout: post
 date: 2024-01-26
-title:  Pension Systems Revisited in the Age of Automation and a Greying Economy, R&R
-author: Joint work with <a href="https://dwlee05.github.io">Dongwoo Lee</a>, R&R in the <em> Journal of Economic Behavior & Organization </em>
+title:  Pension Systems Revisited in the Age of Automation and a Greying Economy
+author: Joint work with <a href="https://dwlee05.github.io">Dongwoo Lee</a>,
+***R&R Journal of Economic Behavior & Organization*** 
 inline: false
 related_posts: false
 ---
