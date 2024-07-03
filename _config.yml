@@ -31,6 +31,7 @@ address:
   city: Edinburgh
   country: United Kingdom
 google_analytics: UA-69300817-1
+scholar_userid: S9clcowAAAAJ
 
 # needed for travis-ci build
 exclude: [vendor]
