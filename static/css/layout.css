@@ -5,8 +5,8 @@ body {
     font-size: 15px;
     line-height: 21px;
     color: #14213D; /* rgb(48, 48, 48); #253342; #1D2023; */
-    border-top: 5px solid #02341D; /*#27a822;*/
-    border-bottom: 5px solid #02341D; /*#27A822;*/
+    border-top: 5px solid #1F4762; /* #27a822; #02341D; */
+    border-bottom: 5px solid #1F4762; /* #27A822; #02341D; */
 }
 
 .container {
