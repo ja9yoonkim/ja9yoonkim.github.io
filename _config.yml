@@ -27,9 +27,9 @@ tel_full: #tel:+440000000000
 google_maps: 'https://maps.app.goo.gl/5HWidzJuupE2egoo6'
 address:
   street: Xian’ning  West Road 28
-  postcode: 710049
+  #postcode: 710049
   city: Xi'an,  Shaanxi
-  country: China
+  country: China, 710049
 google_analytics: #UA-69300817-1
 scholar_userid: S9clcowAAAAJ
 
