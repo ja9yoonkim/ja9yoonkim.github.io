@@ -33,10 +33,11 @@ p, address {
 .me {
     width: 150px;
     height: 150px;
-    border-radius: 80px;
+    border-radius: 100px;
     -webkit-border-radius: 50px;
     -moz-border-radius: 50px;
     margin-bottom: 20px;
+    margin-left: 20px;
 }
 
 header > h1, section > h1 {
