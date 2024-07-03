@@ -4,9 +4,9 @@ body {
     font-family: "Raleway", Helvetica, Arial, sans-serif;
     font-size: 15px;
     line-height: 21px;
-    color: #253342; /*rgb(48, 48, 48);*/
-    border-top: 5px solid #191970; /*#27a822;*/
-    border-bottom: 5px solid #191970; /*#27A822;*/
+    color: #1D2023; /*rgb(48, 48, 48);, #253342;*/
+    border-top: 5px solid #02341D; /*#27a822;*/
+    border-bottom: 5px solid #02341D; /*#27A822;*/
 }
 
 .container {
@@ -33,7 +33,7 @@ p, address {
 .me {
     width: 150px;
     height: 150px;
-    border-radius: 100px;
+    border-radius: 80px;
     -webkit-border-radius: 100px;
     -moz-border-radius: 100px;
     margin-bottom: 20px;
