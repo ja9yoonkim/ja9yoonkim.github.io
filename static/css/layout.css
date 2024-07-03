@@ -4,7 +4,7 @@ body {
     font-family: "Raleway", Helvetica, Arial, sans-serif;
     font-size: 15px;
     line-height: 21px;
-    color: #1D2023; /*rgb(48, 48, 48);, #253342;*/
+    color: #14213D; /* rgb(48, 48, 48); #253342; #1D2023; */
     border-top: 5px solid #02341D; /*#27a822;*/
     border-bottom: 5px solid #02341D; /*#27A822;*/
 }
@@ -23,7 +23,7 @@ a:visited {
 }
 
 a:hover, a:focus {
-    color: #02341D; /*#27A822;*/
+    color: #B87333; /*#27A822;*/
 }
 
 p, address {
@@ -33,7 +33,7 @@ p, address {
 .me {
     width: 150px;
     height: 150px;
-    border-radius: 80px;
+    border-radius: 60px;
     -webkit-border-radius: 100px;
     -moz-border-radius: 100px;
     margin-bottom: 20px;
@@ -41,7 +41,7 @@ p, address {
 }
 
 header > h1, section > h1 {
-    color: #4D453A; /*#27A822;*/
+    color: #B87333; /*#27A822;*/
 }
 
 header > h1 {
