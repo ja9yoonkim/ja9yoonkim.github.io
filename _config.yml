@@ -26,12 +26,13 @@ tel: #+44 0000 000000
 tel_full: #tel:+440000000000
 google_maps: 'https://maps.app.goo.gl/5HWidzJuupE2egoo6'
 address:
-  street: 44 Perth Street
-  postcode: EH3 5BL
-  city: Edinburgh
-  country: United Kingdom
+  street: Xian’ning West Road 28
+  city: Xi'an
+  country: China
+  postcode: 710049
 google_analytics: #UA-69300817-1
 scholar_userid: S9clcowAAAAJ
 
 # needed for travis-ci build
 exclude: [vendor]
+#Xian’ning West Road 28,Xi’an,Shaanxi Province,710049,P.R.China
