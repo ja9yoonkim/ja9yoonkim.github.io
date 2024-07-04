@@ -32,6 +32,7 @@ address:
   country: 710049, China
 google_analytics: #UA-69300817-1
 scholar_userid: S9clcowAAAAJ
+ssrn_id: 2643520
 
 # needed for travis-ci build
 exclude: [vendor]
