@@ -31,8 +31,8 @@ p, address {
 }
 
 .me {
-    width: 210px;
-    height: 210px;
+    width: 215px;
+    height: 215px;
     border-radius: 50%; /* 75px; */
     -webkit-border-radius: 110px;
     -moz-border-radius: 110px;
