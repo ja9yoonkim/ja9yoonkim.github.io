@@ -35,8 +35,7 @@ scholar_userid: S9clcowAAAAJ
 ssrn_id: 2643520
 research_gate_profile: Jae-Yoon-Kim-5
 
-plugins:
-  - jekyll-seo-tag
+show_downloads: true
 
 # needed for travis-ci build
 exclude: [vendor]
