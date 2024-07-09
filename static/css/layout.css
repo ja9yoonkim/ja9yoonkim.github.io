@@ -23,7 +23,7 @@ a:visited {
 }
 
 a:hover, a:focus {
-    color: #B87333; /*#27A822;*/
+    color: #F2F3F4; /* #27A822; #F2F3F4; #B87333; */
 }
 
 p, address {
