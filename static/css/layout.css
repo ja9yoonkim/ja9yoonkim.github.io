@@ -113,7 +113,7 @@ article > header address + time::before {
 
 em {
     font-style: italic; /*normal;*/
-    font-weight: bold;
+    font-weight: normal; /*bold;*/
     color: rgb(100, 100, 100);
     /*margin-right: 6px;*/
 }
