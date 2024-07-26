@@ -14,8 +14,9 @@ body {
 }
 
 a {
-    /*text-decoration: none;*/
-    text-decoration-color: #639C9C;
+    text-decoration: none;
+    color: #639C9C;
+    /*text-decoration-color: #639C9C;*/
     /*background-color: rgba(39, 168, 34, 0.06);*/
 }
 
