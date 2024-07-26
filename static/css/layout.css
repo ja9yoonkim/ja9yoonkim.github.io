@@ -116,7 +116,7 @@ article > header address + time::before {
 em {
     font-style: italic; /*normal;*/
     /*font-weight: normal; /*bold;normal;lighter;*/
-    color: #639C9C; /*rgb(200, 100, 100);*/
+    color: #2C3E50; /*rgb(200, 100, 100); #2C3E50; #639C9C;*/
     /*margin-right: 6px;*/
 }
 
