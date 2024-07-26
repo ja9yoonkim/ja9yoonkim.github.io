@@ -4,7 +4,7 @@ body {
     font-family: "Raleway", Helvetica, Arial, sans-serif;
     font-size: 15px;
     line-height: 21px;
-    color: red; /* rgb(48, 48, 48); #253342; #1D2023; #14213D; #2C3E50; #1B2631; #758EA7;*/
+    color: #8099B3; /* rgb(48, 48, 48); #253342; #1D2023; #14213D; #2C3E50; #1B2631; #758EA7;*/
     border-top: 3px solid #34495E; /* #27a822; #02341D; #1F4762; */
     border-bottom: 3px solid #34495E; /* #27A822; #02341D; */
 }
@@ -43,7 +43,7 @@ p, address {
 }
 
 header > h1, section > h1 {
-    color: #5A6775; /* #27A822; #B87333; #5A6775; #943126; */
+    color: #214568; /* #27A822; #B87333; #5A6775; #943126; #214568; #5A6775;*/
 }
 
 header > h1 {
