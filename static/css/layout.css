@@ -16,8 +16,8 @@ body {
 a {
     text-decoration: none;
     color: #CD5C5C;
-    text-decoration-color: #639C9C;
-    background-color: rgba(39, 168, 34, 0.06);
+    /*text-decoration-color: #639C9C;*/
+    /*background-color: rgba(39, 168, 34, 0.06);*/
 }
 
 a:visited {
