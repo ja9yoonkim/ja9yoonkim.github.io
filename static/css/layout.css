@@ -15,17 +15,22 @@ body {
 
 a {
     text-decoration: none;
-    color: #CD5C5C;
+    color: #0DC681;
+    font-weight: bold;
     /*text-decoration-color: #639C9C;*/
     /*background-color: rgba(39, 168, 34, 0.06);*/
 }
 
 a:visited {
     text-decoration: none;
+    color: #0DC681;
+    font-weight: bold;
 }
 
 a:hover, a:focus {
     color: #FF7F50; /* #27A822; #F2F3F4; #B87333; */
+    text-decoration: none;
+    font-weight: bold;
 }
 
 p, address {
