@@ -28,7 +28,7 @@ a:visited {
 }
 
 a:hover, a:focus {
-    color: #FF7F50; /* #27A822; #F2F3F4; #B87333; */
+    color: #0DC681; /* #27A822; #F2F3F4; #B87333; #FF7F50; */
     text-decoration: none;
     font-weight: bold;
 }
