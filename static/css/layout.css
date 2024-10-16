@@ -47,12 +47,12 @@ p, address {
     margin-left: 10px;
 }
 
-header > h1, section > h1 {
+header > h3, section > h3 {
     color: #063E76; /* #27A822; #B87333; #5A6775; #943126; #214568; #5A6775;*/
     font-family: 'Raleway', sans-serif;
 }
 
-header > h1 {
+header > h3 {
     line-height: 100%;
     font-size: 250%;
     margin-bottom: 20px;
@@ -70,9 +70,9 @@ section {
     margin-bottom: 20px;
 }
 
-section > h1 {
-    font-size: 140%;
-    line-height: 120%;
+section > h3 {
+    font-size: 100%;
+    line-height: 100%;
     text-transform: uppercase;
 }
 
