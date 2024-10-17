@@ -38,8 +38,8 @@ p, address {
 }
 
 .me {
-    width: 200px; /* 215px; */
-    height: 200px; /* 215px; */
+    width: 215px; /* 215px; */
+    height: 215px; /* 215px; */
     border-radius: 15px; /* 75px; 50% */
     /* -webkit-border-radius: 20px;
     -moz-border-radius: 20px; */
