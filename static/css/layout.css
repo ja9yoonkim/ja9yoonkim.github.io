@@ -41,8 +41,8 @@ p, address {
     width: 200px; /* 215px; */
     height: 200px; /* 215px; */
     border-radius: 15px; /* 75px; 50% */
-    -webkit-border-radius: 110px;
-    -moz-border-radius: 110px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
     margin-bottom: 20px;
     margin-left: 10px;
 }
