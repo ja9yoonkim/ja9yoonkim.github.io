@@ -40,7 +40,7 @@ p, address {
 .me {
     width: 200px; /* 215px; */
     height: 200px; /* 215px; */
-    border-radius: 50%; /* 75px; */
+    border-radius: 15px; /* 75px; 50% */
     -webkit-border-radius: 110px;
     -moz-border-radius: 110px;
     margin-bottom: 20px;
