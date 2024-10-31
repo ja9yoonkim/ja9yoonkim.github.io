@@ -50,7 +50,7 @@ p, address {
 
 header > h1, section > h1 {
     color: #063E76; /* #27A822; #B87333; #5A6775; #943126; #214568; #5A6775;*/
-    font-family: 'Merriweather'; font-weight: bold; /* <h5 style="color:#063E76; font-family: 'Merriweather', serif; font-weight: bold;">{{ site.name }}</h5> //// 'Raleway', sans-serif; */
+    font-family: Merriweather; font-weight: bold; font-variant: small-caps; font-weight: 700; /* <h5 style="color:#063E76; font-family: 'Merriweather', serif; font-weight: bold;">{{ site.name }}</h5> //// 'Raleway', sans-serif; */
 }
 
 header > h1 {
