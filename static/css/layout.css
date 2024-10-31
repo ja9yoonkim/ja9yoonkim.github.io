@@ -72,9 +72,10 @@ section {
 }
 
 section > h1 {
-    font-size: 140%; /* 140%; */
+    font-size: 120%; /* 140%; */
     line-height: 100%; /* 120%; */
     text-transform: uppercase;
+    font-family: Raleway; font-weight: bold; font-style: normal; font-variant: small-caps; font-weight: 600;
 }
 
 article {
@@ -82,7 +83,7 @@ article {
 }
 
 article > header > h1 {
-    font-size: 110%; /* 112%; */
+    font-size: 100%; /* 112%; */
     font-weight: bold; 
     line-height: 100%; /* 150%; */
     margin-bottom: 0;
