@@ -73,7 +73,7 @@ section {
 
 section > h1 {
     font-size: 100%; /* 140%; */
-    line-height: 120%;
+    line-height: 100%; /* 120%; */
     text-transform: uppercase;
 }
 
