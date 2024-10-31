@@ -83,8 +83,8 @@ article {
 
 article > header > h1 {
     font-size: 100%; /* 112%; */
-    font-weight: bold;
-    line-height: 150%;
+    font-weight: bold; 
+    line-height: 100%; /* 150%; */
     margin-bottom: 0;
     color: inherit;
 }
