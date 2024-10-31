@@ -73,9 +73,9 @@ section {
 
 section > h1 {
     font-size: 120%; /* 140%; */
-    line-height: 90%; /* 120%; */
+    line-height: 100%; /* 120%; */
     /* text-transform: uppercase; */
-    font-family: Merriweather; font-weight: bold; font-style: normal; font-variant: small-caps; font-weight: 700;
+    font-family: Merriweather; font-weight: bold; font-style: normal; font-variant: normal; font-weight: 700;
 }
 
 article {
