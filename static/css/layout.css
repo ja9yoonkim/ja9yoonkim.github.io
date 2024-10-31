@@ -82,7 +82,7 @@ article {
 }
 
 article > header > h1 {
-    font-size: 112%;
+    font-size: 100%; /* 112%; */
     font-weight: bold;
     line-height: 150%;
     margin-bottom: 0;
