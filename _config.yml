@@ -35,6 +35,8 @@ scholar_userid: S9clcowAAAAJ
 ssrn_id: 2643520
 research_gate_profile: Jae-Yoon-Kim-5
 
+favicon: /static/img/Fav_32.png
+
 # needed for travis-ci build
 exclude: [vendor]
 #Xian’ning West Road 28,Xi’an,Shaanxi Province,710049,P.R.China
