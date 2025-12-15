@@ -26,10 +26,10 @@ tel: #+44 0000 000000
 tel_full: #tel:+440000000000
 google_maps: 'https://maps.app.goo.gl/5HWidzJuupE2egoo6'
 address:
-  street1: Xian’ning West Road 28
-  city: Xi'an, Shaanxi Province
-  postcode: 710049
-  country: 710049, China
+  street1: 2, Busandaehak-ro 63beon-gil, Geumjeong-gu
+  city: Busan
+  postcode: 46241
+  country: Republic of Korea
 google_analytics: #UA-69300817-1
 scholar_userid: S9clcowAAAAJ
 ssrn_id: 2643520
