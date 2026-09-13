@@ -398,10 +398,14 @@ hr {
 
 .icon-links svg { width: var(--icon); height: var(--icon); display: block; }
 
-/* Academicons glyphs. A glyph at a given font-size draws slightly larger than
-   an SVG at the same pixel box, so it is set one pixel down to sit level. The
-   font inherits currentColor, so hover and dark mode need nothing extra. */
-.icon-links .ai {
+/* Academicons (.ai) and Font Awesome (.fa-*) glyphs. A glyph at a given
+   font-size draws slightly larger than an SVG in the same pixel box, so it is
+   set one pixel down to sit level. Both fonts inherit currentColor, so hover
+   and dark mode need nothing extra. */
+.icon-links .ai,
+.icon-links .fa-brands,
+.icon-links .fa-solid,
+.icon-links .fa-regular {
   font-size: calc(var(--icon) - 1px);
   line-height: 1;
   display: block;
