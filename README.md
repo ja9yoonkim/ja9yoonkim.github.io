@@ -84,7 +84,7 @@ same photo, colours flattened and the background replaced with the pine accent.
 To use it instead, change one line in `index.html`:
 
 ```html
-<img class="portrait portrait--square" src="assets/img/portrait.png?v=22" alt="Jae-Yoon Kim" width="132" height="132">
+<img class="portrait portrait--square" src="assets/img/portrait.png?v=23" alt="Jae-Yoon Kim" width="132" height="132">
 ```
 
 Whenever you swap the file, bump that `?v=` number or returning visitors will
@@ -113,11 +113,15 @@ and the office pin today, and whatever you add later. Browse it at
 fa-linkedin`, `fa-brands fa-bluesky`, `fa-brands fa-youtube`, `fa-solid
 fa-file-pdf`.
 
-**One inline SVG** — the Gmail mark on the email link, from
-[simpleicons.org](https://simpleicons.org). Note that a `mailto:` link opens
-the *visitor's* mail app, not Gmail, so the mark describes your provider rather
-than what the link does; `fa-solid fa-envelope` is the conventional choice if
-you would rather it did.
+Email uses `fa-solid fa-at`. If you ever want an inline SVG instead — a brand
+mark from [simpleicons.org](https://simpleicons.org), say — paste the `<svg>`
+in place of the `<i>` and give it `fill="currentColor"` and
+`aria-hidden="true"`; the stylesheet already sizes any `svg` inside this row.
+
+**A note on Pro icons.** Font Awesome's `circle-`/`square-` combination icons
+(`fa-circle-envelope` and friends) are Pro-only and are not in the free package
+this site loads. A Pro class silently renders nothing — no error, just a gap.
+Before using an icon, check it is listed under the free plan.
 
 Adding a link is one `<li>`:
 
@@ -137,16 +141,16 @@ the `.icon-links` rule in `assets/css/style.css`:
 .icon-links { --icon: 26px; }
 ```
 
-Change that one number. The inline SVG takes it as its width and height; the
-font glyphs take it minus a pixel as their `font-size`, because a glyph draws
-slightly larger than an SVG in the same box. Adjust `gap` on the same rule if
-the icons start to crowd each other.
+Change that one number. The font glyphs take it minus a pixel as their
+`font-size`, and any inline SVG takes it as width and height — a glyph draws
+slightly larger than an SVG in the same box, hence the offset. Adjust `gap` on
+the same rule if the icons start to crowd each other.
 
 **One caveat about icon fonts.** If a CDN is slow or blocked, the glyph leaves
 an empty gap — there is no text underneath to fall back to. The CSS holds the
 slot open so the row does not jump, but the icon is simply missing. If that
-matters to you, paste each mark as inline SVG the way the Gmail one is done and
-drop both stylesheet links.
+matters to you, paste each mark as inline SVG instead and drop both stylesheet
+links.
 
 ---
 
@@ -240,10 +244,10 @@ Google Fonts; delete that `<link>` from each `<head>` if you would rather have
 no external requests, and the stacks fall back to Palatino/Georgia.
 
 **Cache busting.** Every page links the stylesheet as
-`assets/css/style.css?v=21` rather than plain `style.css`. Browsers key their
+`assets/css/style.css?v=22` rather than plain `style.css`. Browsers key their
 cache on the full URL, so without that suffix a returning visitor keeps using
 the copy they already have and never sees your change. **After editing
-`style.css` or `main.js`, bump the number in every page** — `?v=21` to `?v=22` —
+`style.css` or `main.js`, bump the number in every page** — `?v=22` to `?v=23` —
 or the update will be invisible to anyone who has been to the site before. The
 same applies to `portrait.jpg` on the front page.
 
