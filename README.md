@@ -84,7 +84,7 @@ same photo, colours flattened and the background replaced with the pine accent.
 To use it instead, change one line in `index.html`:
 
 ```html
-<img class="portrait portrait--square" src="assets/img/portrait.png?v=20" alt="Jae-Yoon Kim" width="132" height="132">
+<img class="portrait portrait--square" src="assets/img/portrait.png?v=21" alt="Jae-Yoon Kim" width="132" height="132">
 ```
 
 Whenever you swap the file, bump that `?v=` number or returning visitors will
@@ -246,10 +246,10 @@ Google Fonts; delete that `<link>` from each `<head>` if you would rather have
 no external requests, and the stacks fall back to Palatino/Georgia.
 
 **Cache busting.** Every page links the stylesheet as
-`assets/css/style.css?v=19` rather than plain `style.css`. Browsers key their
+`assets/css/style.css?v=20` rather than plain `style.css`. Browsers key their
 cache on the full URL, so without that suffix a returning visitor keeps using
 the copy they already have and never sees your change. **After editing
-`style.css` or `main.js`, bump the number in every page** — `?v=19` to `?v=20` —
+`style.css` or `main.js`, bump the number in every page** — `?v=20` to `?v=21` —
 or the update will be invisible to anyone who has been to the site before. The
 same applies to `portrait.jpg` on the front page.
 
