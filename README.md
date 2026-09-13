@@ -62,9 +62,6 @@ that is a placeholder. There are only a handful:
 
 Two things worth checking rather than assuming:
 
-- **Email.** The old site listed `jaeyoonk@xjtu.edu.cn`, your Xi'an Jiaotong
-  address. That is carried over here. If you now use a `pusan.ac.kr` address,
-  change it in `index.html` and `cv.html`.
 - **Author order.** Both co-authored 2025 papers are listed with you first,
   matching how RePEc indexes the JEBO paper. Correct the two `pub__authors`
   lines in `index.html`, `research.html` and `cv.html` if that is wrong for the
@@ -87,11 +84,63 @@ same photo, colours flattened and the background replaced with the pine accent.
 To use it instead, change one line in `index.html`:
 
 ```html
-<img class="portrait portrait--square" src="assets/img/portrait.png?v=14" alt="Jae-Yoon Kim" width="132" height="132">
+<img class="portrait portrait--square" src="assets/img/portrait.png?v=19" alt="Jae-Yoon Kim" width="132" height="132">
 ```
 
 Whenever you swap the file, bump that `?v=` number or returning visitors will
 keep seeing the old picture.
+
+### The link icons
+
+The row under the bio comes from three places.
+
+**Academicons** supplies Google Scholar, SSRN and ResearchGate. It is an icon
+font built specifically for academic profile links, so those three are drawn by
+one hand at one weight. `index.html` loads it from a CDN:
+
+```html
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+```
+
+and each icon is a class, nothing else:
+
+```html
+<i class="ai ai-google-scholar" aria-hidden="true"></i>
+```
+
+The full list of names is at [jpswalsh.github.io/academicons](https://jpswalsh.github.io/academicons/)
+— `ai-orcid`, `ai-arxiv`, `ai-semantic-scholar`, `ai-dblp` and so on. To add
+one, copy an existing `<li>` and change the class and the `href`. Only
+`index.html` loads the stylesheet, because it is the only page with the row.
+
+**Simple Icons** supplies the Gmail mark on the email link, pasted inline.
+Note that a `mailto:` link opens the *visitor's* mail app, not Gmail, so the
+mark describes your provider rather than what the link does — swap it for a
+plain envelope if that bothers you.
+
+**Drawn here** is the map pin. Academicons has no location icon, so it is
+plain SVG in `index.html`, in the same 24×24, 1.7-stroke style as the theme
+toggle.
+
+**GitHub is still a word.** Academicons has no GitHub mark and the official
+artwork should be pasted rather than redrawn. To make it an icon: open
+[simpleicons.org/icons/github.svg](https://simpleicons.org/icons/github.svg),
+use **Copy SVG**, replace the whole `<span class="as-text">GitHub</span>` with
+it, and add `width="22"`, `height="22"`, `fill="currentColor"` and
+`aria-hidden="true"` to the pasted `<svg>`. Delete its `<title>` so the tooltip
+comes from the link instead. Once it is an icon, delete the
+`<li><span class="sep">…</span></li>` that divides the icons from the word.
+
+**One caveat about icon fonts.** If the CDN is slow or blocked, an Academicons
+glyph leaves an empty gap — there is no text underneath to fall back to. The
+CSS holds the slot open so the row does not jump, but the icon is simply
+missing. Inline SVG has no such failure mode. If that bothers you, the
+alternative is to paste each mark as SVG the way GitHub is described above and
+drop the stylesheet link entirely.
+
+Every link carries an `aria-label`, and each icon a `title`, so the name is
+announced to screen readers and appears as a tooltip. Keep both when you edit —
+an icon with no accessible name is unusable to anyone who cannot see it.
 
 ---
 
@@ -185,10 +234,10 @@ Google Fonts; delete that `<link>` from each `<head>` if you would rather have
 no external requests, and the stacks fall back to Palatino/Georgia.
 
 **Cache busting.** Every page links the stylesheet as
-`assets/css/style.css?v=13` rather than plain `style.css`. Browsers key their
+`assets/css/style.css?v=18` rather than plain `style.css`. Browsers key their
 cache on the full URL, so without that suffix a returning visitor keeps using
 the copy they already have and never sees your change. **After editing
-`style.css` or `main.js`, bump the number in every page** — `?v=13` to `?v=14` —
+`style.css` or `main.js`, bump the number in every page** — `?v=18` to `?v=19` —
 or the update will be invisible to anyone who has been to the site before. The
 same applies to `portrait.jpg` on the front page.
 

@@ -366,6 +366,60 @@ hr {
 .meta-links--left { justify-content: flex-start; margin-top: 0; }
 .meta-links--left li:first-child { margin-left: 0; }
 
+/* ---- icon row -----------------------------------------------------------
+   Icons carry no visible label, so every link needs an accessible name:
+   aria-label for screen readers, <title> for the hover tooltip. Icons are
+   drawn in currentColor at 1.7 stroke weight to match the theme toggle. */
+.icon-links {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .6rem 1.25rem;
+  margin: 0;
+  padding: 0;
+}
+
+.icon-links a {
+  display: inline-flex;
+  align-items: center;
+  color: var(--ink-soft);
+  border: 0;
+  transition: color .12s ease;
+}
+.icon-links a:hover { color: var(--accent); }
+
+.icon-links svg { width: 22px; height: 22px; display: block; }
+
+/* Academicons glyphs: sized to sit level with the drawn 22px icons. The font
+   inherits currentColor, so hover and dark mode need nothing extra. */
+.icon-links .ai {
+  font-size: 21px;
+  line-height: 1;
+  display: block;
+  /* holds the slot open so the row keeps its rhythm if the font is slow or
+     blocked — an icon font that fails to load leaves nothing behind */
+  min-width: 21px;
+  min-height: 21px;
+  text-align: center;
+}
+
+/* links still set as words, until an official mark is pasted in */
+.icon-links .as-text {
+  font-family: var(--sans);
+  font-size: var(--step--1);
+  letter-spacing: .045em;
+}
+.icon-links .as-text:hover { text-decoration: underline; text-underline-offset: 4px; }
+
+/* thin separator between the drawn icons and the worded links */
+.icon-links .sep {
+  width: 1px;
+  height: 1.05em;
+  background: var(--rule-strong);
+  display: block;
+}
+
 .portrait {
   width: 8.25rem;
   height: 8.25rem;
