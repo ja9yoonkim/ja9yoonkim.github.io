@@ -232,58 +232,77 @@ hr {
 
 .landing {
   position: relative;
-  min-height: 100svh;
-  display: grid;
-  place-items: center;
-  padding-block: 4rem 3rem;
+  max-width: var(--page);
+  margin-inline: auto;
+  /* top padding leaves the theme toggle clear of the photo below it */
+  padding-block: 6rem 3.5rem;
 }
 
 .landing__inner {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 1.15rem;
-  text-align: center;
-  max-width: 40rem;
-  width: 100%;
+  align-items: flex-start;
+  gap: 1.35rem;
 }
 
 .theme-toggle--float {
   position: absolute;
-  top: 1.5rem;
+  top: 1.75rem;
   right: 0;
 }
 
-/* the four big section links, set in a single row like a table of contents */
-.section-links {
-  width: 100%;
-  margin-top: 1.4rem;
-  padding-top: 1.9rem;
-  border-top: 1px solid var(--rule);
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: .75rem 2.5rem;
+/* the name, set in Crimson Pro Black Italic */
+.landing .hero__name {
+  font-family: "Crimson Pro", "Iowan Old Style", Georgia,
+               "Apple SD Gothic Neo", "Malgun Gothic", serif;
+  font-style: italic;
+  font-weight: 900;
+  font-size: clamp(2.75rem, 6.6vw, 4.15rem);
+  line-height: 1;
+  letter-spacing: -.016em;
+  margin-block: -.2rem;
 }
 
-.section-links a {
-  font-family: var(--serif);
-  font-size: var(--step-2);
-  font-weight: 500;
-  line-height: 1.1;
+.landing .hero__bio {
+  font-size: var(--step-1);
+  line-height: 1.6;
+  max-width: var(--measure);
+  margin: 0;
+}
+
+/* the dashed divider between the introduction and the section list */
+.rule-dashed {
+  width: 100%;
+  border: 0;
+  border-top: 1.5px dashed var(--rule-strong);
+  margin: .75rem 0 0;
+}
+
+/* section list: right-aligned, one per line, each a full-width hit area */
+.section-nav {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: -.25rem;
+}
+
+.section-nav a {
+  font-family: var(--sans);
+  font-size: .9375rem;
+  font-weight: 700;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  text-align: right;
   color: var(--ink);
   border: 0;
-  border-bottom: 1px solid transparent;
-  padding-bottom: 3px;
+  border-radius: 4px;
+  padding: .45rem .7rem;
+  transition: background-color .12s ease, color .12s ease;
 }
-.section-links a:hover {
+.section-nav a:hover { background: var(--accent-weak); }
+.section-nav a[aria-current="page"] {
+  background: var(--accent-weak);
   color: var(--accent);
-  border-bottom-color: var(--accent);
-}
-
-@media (max-width: 34rem) {
-  .section-links { gap: .75rem 1.6rem; }
-  .section-links a { font-size: var(--step-1); }
 }
 
 .hero {
@@ -296,6 +315,55 @@ hr {
   max-width: 40rem;
   margin-inline: auto;
 }
+
+/* introduction on the left, photo on the right, above the dashed rule */
+.landing__top {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2.5rem;
+}
+
+.landing__intro {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.35rem;
+  min-width: 0;
+}
+
+@media (max-width: 46rem) {
+  /* reversed so the photo still comes first once the row stacks */
+  .landing__top {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+}
+
+/* rounded square rather than a circle, sitting directly above the list.
+   Two classes so this beats the 50% radius on .portrait, which is declared
+   further down the file. */
+.portrait.portrait--square {
+  width: 7rem;
+  height: 7rem;
+  border-radius: 1.35rem;
+  margin-right: .7rem;   /* line the right edge up with the list labels */
+  align-self: flex-end;  /* sit on the dashed rule rather than beside the name */
+  position: relative;
+  top: .5cm;             /* nudged down so it rests across the rule */
+}
+
+@media (max-width: 34rem) {
+  .portrait.portrait--square {
+    width: 5.75rem; height: 5.75rem; border-radius: 1.1rem;
+  }
+}
+
+/* left-aligned link row on the landing page */
+.meta-links--left { justify-content: flex-start; margin-top: 0; }
+.meta-links--left li:first-child { margin-left: 0; }
 
 .portrait {
   width: 8.25rem;

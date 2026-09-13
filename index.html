@@ -13,9 +13,9 @@
 <link rel="icon" href="assets/img/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="assets/css/style.css?v=3">
-<script src="assets/js/main.js?v=3"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@1,900&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="assets/css/style.css?v=11">
+<script src="assets/js/main.js?v=11"></script>
 </head>
 <body>
 
@@ -26,29 +26,38 @@
     </button>
 
   <main class="landing__inner">
-    <!-- EDIT: drop a square photo at assets/img/portrait.jpg and change src below -->
-    <img class="portrait" src="assets/img/portrait.jpg?v=5" alt="Jae-Yoon Kim" width="132" height="132">
-    <h1 class="hero__name">Jae-Yoon Kim</h1>
-    <p class="hero__bio">
-      I am an assistant professor of economics at
-      <a href="https://pnuecon.pusan.ac.kr/pnuecon/index.do">Pusan National University</a>. I work on macroeconomics
-      and monetary policy — how supply chain pressures pass through to
-      inflation, and what automation and an ageing population do to pension
-      systems and to the conduct of policy. Most of my empirical work is
-      Bayesian and time-varying.
-    </p>
 
-    <ul class="meta-links">
-      <li><a href="cv.html">CV</a></li>
-      <li><a href="mailto:jaeyoonk@xjtu.edu.cn">Email</a></li>
-      <li><a href="https://maps.app.goo.gl/5HWidzJuupE2egoo6">Office</a></li>
-      <li><a href="https://scholar.google.com/citations?user=S9clcowAAAAJ" rel="me">Google&nbsp;Scholar</a></li>
-      <li><a href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=2643520" rel="me">SSRN</a></li>
-      <li><a href="https://www.researchgate.net/profile/Jae-Yoon-Kim-5" rel="me">ResearchGate</a></li>
-      <li><a href="https://github.com/ja9yoonkim" rel="me">GitHub</a></li>
-    </ul>
+    <div class="landing__top">
+      <div class="landing__intro">
+        <h1 class="hero__name">Jae-Yoon Kim</h1>
 
-    <nav class="section-links" aria-label="Sections">
+        <p class="hero__bio">
+          Assistant professor of economics at
+          <a href="https://pnuecon.pusan.ac.kr/pnuecon/index.do">Pusan National University</a>, working on
+          macroeconomics and monetary policy — how supply chain pressures pass
+          through to inflation, and what automation and an ageing population do
+          to pension systems. Ph.D. Virginia Tech, 2018.
+        </p>
+
+        <ul class="meta-links meta-links--left">
+          <li><a href="mailto:jaeyoonk@xjtu.edu.cn">Email</a></li>
+          <li><a href="https://scholar.google.com/citations?user=S9clcowAAAAJ" rel="me">Google&nbsp;Scholar</a></li>
+          <li><a href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=2643520" rel="me">SSRN</a></li>
+          <li><a href="https://www.researchgate.net/profile/Jae-Yoon-Kim-5" rel="me">ResearchGate</a></li>
+          <li><a href="https://github.com/ja9yoonkim" rel="me">GitHub</a></li>
+          <li><a href="https://maps.app.goo.gl/5HWidzJuupE2egoo6">Office</a></li>
+        </ul>
+      </div>
+
+      <!-- swap portrait.jpg for portrait.png to use the illustrated version -->
+      <img class="portrait portrait--square" src="assets/img/portrait.jpg?v=11"
+           alt="Jae-Yoon Kim" width="112" height="112">
+    </div>
+
+    <hr class="rule-dashed">
+
+    <nav class="section-nav" aria-label="Sections">
+      <a href="index.html" aria-current="page">Home</a>
       <a href="research.html">Research</a>
       <a href="teaching.html">Teaching</a>
       <a href="posts.html">Notes</a>

@@ -52,7 +52,6 @@ that is a placeholder. There are only a handful:
 
 | Where | What |
 |---|---|
-| `index.html` | Your photo — see below |
 | `cv.html` | Start years for the three appointments |
 | `cv.html` | Dissertation title and advisor (or delete that line) |
 | `cv.html` | Master's and bachelor's degrees |
@@ -71,16 +70,28 @@ Two things worth checking rather than assuming:
   lines in `index.html`, `research.html` and `cv.html` if that is wrong for the
   Global Economic Review or Applied Economics Letters papers.
 
-### Your photo
+### The portrait
 
-Crop a photo square, save it as `assets/img/portrait.jpg` (400×400 is plenty),
-and change one line in `index.html`:
+The front page uses `assets/img/portrait.jpg` — your photo, cropped square with
+the face centred and the eyes about 38% down, at 720×720 so it stays sharp on a
+high-resolution screen.
+
+**The image file is a plain square.** The shape is drawn by CSS: on the front
+page `.portrait--square` rounds the corners to `1.35rem`, and everywhere else
+`.portrait` makes a full circle with `border-radius: 50%`. So a replacement
+never needs rounded corners or a transparent background — square is all it has
+to be, at least 400×400. To change how round it is, edit that one radius.
+
+`assets/img/portrait.png` is also in the folder: an illustrated version of the
+same photo, colours flattened and the background replaced with the pine accent.
+To use it instead, change one line in `index.html`:
 
 ```html
-<img class="portrait" src="assets/img/portrait.jpg" alt="Jae-Yoon Kim" width="132" height="132">
+<img class="portrait portrait--square" src="assets/img/portrait.png?v=12" alt="Jae-Yoon Kim" width="132" height="132">
 ```
 
-The placeholder `avatar.svg` can then be deleted.
+Whenever you swap the file, bump that `?v=` number or returning visitors will
+keep seeing the old picture.
 
 ---
 
@@ -167,19 +178,19 @@ and pick a darker version for light mode and a lighter, less saturated one for
 dark, or links will either vanish or glare.
 
 **Type.** EB Garamond for everything that is read — close in spirit to the ET
-Book face Tufte CSS uses. IBM Plex Sans for navigation, labels and metadata,
-IBM Plex Mono for years and figures. Korean falls back to Apple SD Gothic Neo /
+Book face Tufte CSS uses. Crimson Pro Black Italic (900) for the name on
+the front page. IBM Plex Sans for navigation, labels and metadata, IBM Plex Mono for years and figures. Korean falls back to Apple SD Gothic Neo /
 Malgun Gothic, so mixed Korean–English text stays readable. Fonts load from
 Google Fonts; delete that `<link>` from each `<head>` if you would rather have
 no external requests, and the stacks fall back to Palatino/Georgia.
 
 **Cache busting.** Every page links the stylesheet as
-`assets/css/style.css?v=3` rather than plain `style.css`. Browsers key their
+`assets/css/style.css?v=11` rather than plain `style.css`. Browsers key their
 cache on the full URL, so without that suffix a returning visitor keeps using
 the copy they already have and never sees your change. **After editing
-`style.css` or `main.js`, bump the number in every page** — `?v=3` to `?v=4` —
+`style.css` or `main.js`, bump the number in every page** — `?v=11` to `?v=12` —
 or the update will be invisible to anyone who has been to the site before. The
-same applies to `avatar.svg` on the front page.
+same applies to `portrait.jpg` on the front page.
 
 **Layout.** Running text is capped at 66 characters. Section labels sit in a
 9rem left-margin column and drop above the content below 46rem. Three theme
@@ -192,7 +203,7 @@ states are handled: the reader's OS preference when nothing is stamped on
 ## 6. Files
 
 ```
-index.html            front page — hero, published papers, teaching, contact
+index.html            front page — name, bio, links, photo, section list
 research.html         published and working papers
 teaching.html         courses, grouped by institution
 posts.html            notes index
@@ -203,7 +214,7 @@ robots.txt            allows crawling (the old one blocked it)
 sitemap.xml           list of pages for search engines
 assets/css/style.css  the entire design
 assets/js/main.js     theme toggle, nothing else
-assets/img/           favicon and placeholder portrait
+assets/img/           favicon, the photo, and the illustrated version
 .nojekyll             tells Pages to serve these files rather than build them
 ```
 
