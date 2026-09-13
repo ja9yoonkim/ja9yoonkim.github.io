@@ -373,7 +373,7 @@ hr {
 .icon-links {
   /* ONE KNOB FOR ICON SIZE. Everything below is derived from it, so this is
      the only number to change — inline SVGs and Academicons glyphs together. */
-  --icon: 24px;
+  --icon: 26px;
 
   list-style: none;
   display: flex;
