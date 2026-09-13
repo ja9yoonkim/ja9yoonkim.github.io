@@ -87,7 +87,7 @@ same photo, colours flattened and the background replaced with the pine accent.
 To use it instead, change one line in `index.html`:
 
 ```html
-<img class="portrait portrait--square" src="assets/img/portrait.png?v=13" alt="Jae-Yoon Kim" width="132" height="132">
+<img class="portrait portrait--square" src="assets/img/portrait.png?v=14" alt="Jae-Yoon Kim" width="132" height="132">
 ```
 
 Whenever you swap the file, bump that `?v=` number or returning visitors will
@@ -178,17 +178,17 @@ and pick a darker version for light mode and a lighter, less saturated one for
 dark, or links will either vanish or glare.
 
 **Type.** EB Garamond for everything that is read — close in spirit to the ET
-Book face Tufte CSS uses. Georgia Bold Italic for the name on the front
-page — a system face, so it loads nothing. IBM Plex Sans for navigation, labels and metadata, IBM Plex Mono for years and figures. Korean falls back to Apple SD Gothic Neo /
+Book face Tufte CSS uses. Source Serif 4 Black Italic (900) for the name
+on the front page. IBM Plex Sans for navigation, labels and metadata, IBM Plex Mono for years and figures. Korean falls back to Apple SD Gothic Neo /
 Malgun Gothic, so mixed Korean–English text stays readable. Fonts load from
 Google Fonts; delete that `<link>` from each `<head>` if you would rather have
 no external requests, and the stacks fall back to Palatino/Georgia.
 
 **Cache busting.** Every page links the stylesheet as
-`assets/css/style.css?v=12` rather than plain `style.css`. Browsers key their
+`assets/css/style.css?v=13` rather than plain `style.css`. Browsers key their
 cache on the full URL, so without that suffix a returning visitor keeps using
 the copy they already have and never sees your change. **After editing
-`style.css` or `main.js`, bump the number in every page** — `?v=12` to `?v=13` —
+`style.css` or `main.js`, bump the number in every page** — `?v=13` to `?v=14` —
 or the update will be invisible to anyone who has been to the site before. The
 same applies to `portrait.jpg` on the front page.
 

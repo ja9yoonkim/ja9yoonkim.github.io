@@ -251,15 +251,16 @@ hr {
   right: 0;
 }
 
-/* the name, set in Georgia Bold Italic — a system face, so nothing to load */
+/* the name, set in Source Serif 4 Black Italic */
 .landing .hero__name {
-  font-family: Georgia, "Iowan Old Style", "Times New Roman", Times,
+  font-family: "Source Serif 4", Georgia, "Iowan Old Style",
                "Apple SD Gothic Neo", "Malgun Gothic", serif;
   font-style: italic;
-  font-weight: 700;
+  font-weight: 900;
+  font-optical-sizing: auto;
   font-size: clamp(2rem, 4.6vw, 2.75rem);
   line-height: 1.08;
-  letter-spacing: -.008em;
+  letter-spacing: -.01em;
   margin-block: -.1rem;
 }
 
