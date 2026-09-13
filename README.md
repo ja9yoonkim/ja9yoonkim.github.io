@@ -84,7 +84,7 @@ same photo, colours flattened and the background replaced with the pine accent.
 To use it instead, change one line in `index.html`:
 
 ```html
-<img class="portrait portrait--square" src="assets/img/portrait.png?v=19" alt="Jae-Yoon Kim" width="132" height="132">
+<img class="portrait portrait--square" src="assets/img/portrait.png?v=20" alt="Jae-Yoon Kim" width="132" height="132">
 ```
 
 Whenever you swap the file, bump that `?v=` number or returning visitors will
@@ -130,6 +130,18 @@ it, and add `width="22"`, `height="22"`, `fill="currentColor"` and
 `aria-hidden="true"` to the pasted `<svg>`. Delete its `<title>` so the tooltip
 comes from the link instead. Once it is an icon, delete the
 `<li><span class="sep">…</span></li>` that divides the icons from the word.
+
+**Resizing the row.** Both kinds of icon are sized from one custom property at
+the top of the `.icon-links` rule in `assets/css/style.css`:
+
+```css
+.icon-links { --icon: 26px; }
+```
+
+Change that one number. The inline SVGs take it as their width and height; the
+Academicons glyphs take it minus a pixel as their `font-size`, because a glyph
+draws slightly larger than an SVG in the same box. Adjust `gap` on the same
+rule if the icons start to crowd each other.
 
 **One caveat about icon fonts.** If the CDN is slow or blocked, an Academicons
 glyph leaves an empty gap — there is no text underneath to fall back to. The
@@ -234,10 +246,10 @@ Google Fonts; delete that `<link>` from each `<head>` if you would rather have
 no external requests, and the stacks fall back to Palatino/Georgia.
 
 **Cache busting.** Every page links the stylesheet as
-`assets/css/style.css?v=18` rather than plain `style.css`. Browsers key their
+`assets/css/style.css?v=19` rather than plain `style.css`. Browsers key their
 cache on the full URL, so without that suffix a returning visitor keeps using
 the copy they already have and never sees your change. **After editing
-`style.css` or `main.js`, bump the number in every page** — `?v=18` to `?v=19` —
+`style.css` or `main.js`, bump the number in every page** — `?v=19` to `?v=20` —
 or the update will be invisible to anyone who has been to the site before. The
 same applies to `portrait.jpg` on the front page.
 

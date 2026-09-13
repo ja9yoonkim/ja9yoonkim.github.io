@@ -371,11 +371,15 @@ hr {
    aria-label for screen readers, <title> for the hover tooltip. Icons are
    drawn in currentColor at 1.7 stroke weight to match the theme toggle. */
 .icon-links {
+  /* ONE KNOB FOR ICON SIZE. Everything below is derived from it, so this is
+     the only number to change — inline SVGs and Academicons glyphs together. */
+  --icon: 26px;
+
   list-style: none;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: .6rem 1.25rem;
+  gap: .6rem 1.4rem;
   margin: 0;
   padding: 0;
 }
@@ -389,18 +393,19 @@ hr {
 }
 .icon-links a:hover { color: var(--accent); }
 
-.icon-links svg { width: 22px; height: 22px; display: block; }
+.icon-links svg { width: var(--icon); height: var(--icon); display: block; }
 
-/* Academicons glyphs: sized to sit level with the drawn 22px icons. The font
-   inherits currentColor, so hover and dark mode need nothing extra. */
+/* Academicons glyphs. A glyph at a given font-size draws slightly larger than
+   an SVG at the same pixel box, so it is set one pixel down to sit level. The
+   font inherits currentColor, so hover and dark mode need nothing extra. */
 .icon-links .ai {
-  font-size: 21px;
+  font-size: calc(var(--icon) - 1px);
   line-height: 1;
   display: block;
   /* holds the slot open so the row keeps its rhythm if the font is slow or
      blocked — an icon font that fails to load leaves nothing behind */
-  min-width: 21px;
-  min-height: 21px;
+  min-width: var(--icon);
+  min-height: var(--icon);
   text-align: center;
 }
 
