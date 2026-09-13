@@ -226,8 +226,65 @@ hr {
 }
 
 /* ==========================================================================
-   Home: centred hero
+   Home: a single-screen landing card. No masthead, no footer — the page is
+   the card, and it ends where the section links end.
    ========================================================================== */
+
+.landing {
+  position: relative;
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+  padding-block: 4rem 3rem;
+}
+
+.landing__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.15rem;
+  text-align: center;
+  max-width: 40rem;
+  width: 100%;
+}
+
+.theme-toggle--float {
+  position: absolute;
+  top: 1.5rem;
+  right: 0;
+}
+
+/* the four big section links, set in a single row like a table of contents */
+.section-links {
+  width: 100%;
+  margin-top: 1.4rem;
+  padding-top: 1.9rem;
+  border-top: 1px solid var(--rule);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: .75rem 2.5rem;
+}
+
+.section-links a {
+  font-family: var(--serif);
+  font-size: var(--step-2);
+  font-weight: 500;
+  line-height: 1.1;
+  color: var(--ink);
+  border: 0;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 3px;
+}
+.section-links a:hover {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+@media (max-width: 34rem) {
+  .section-links { gap: .75rem 1.6rem; }
+  .section-links a { font-size: var(--step-1); }
+}
 
 .hero {
   display: flex;
