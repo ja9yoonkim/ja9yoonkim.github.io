@@ -379,7 +379,7 @@ hr {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: .6rem 1.4rem;
+  gap: .6rem 1.0rem;
   margin: 0;
   padding: 0;
 }
