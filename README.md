@@ -173,6 +173,14 @@ Malgun Gothic, so mixed Korean–English text stays readable. Fonts load from
 Google Fonts; delete that `<link>` from each `<head>` if you would rather have
 no external requests, and the stacks fall back to Palatino/Georgia.
 
+**Cache busting.** Every page links the stylesheet as
+`assets/css/style.css?v=3` rather than plain `style.css`. Browsers key their
+cache on the full URL, so without that suffix a returning visitor keeps using
+the copy they already have and never sees your change. **After editing
+`style.css` or `main.js`, bump the number in every page** — `?v=3` to `?v=4` —
+or the update will be invisible to anyone who has been to the site before. The
+same applies to `avatar.svg` on the front page.
+
 **Layout.** Running text is capped at 66 characters. Section labels sit in a
 9rem left-margin column and drop above the content below 46rem. Three theme
 states are handled: the reader's OS preference when nothing is stamped on
