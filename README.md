@@ -1,80 +1,203 @@
-# Vitae
+# ja9yoonkim.github.io
 
-[![Build Status](https://github.com/jekyllt/vitae/actions/workflows/jekyll_build.yml/badge.svg)](https://github.com/jekyllt/vitae/actions/workflows/jekyll_build.yml)
-[![Ruby](https://img.shields.io/badge/ruby-2.6.3-blue.svg?style=flat)](http://travis-ci.org/jekyllt/vitae)
-[![Jekyll](https://img.shields.io/badge/jekyll-3.9.0-blue.svg?style=flat)](http://travis-ci.org/jekyllt/vitae)
+Hand-written static HTML, one stylesheet, one small script. No Jekyll, no Ruby,
+no build step, nothing to install. GitHub Pages serves these files exactly as
+they are.
 
-Personal homepage (curriculum vitae or resume) based on [João's](https://github.com/joaomoreno/resume).
-Vitae is built with [skeleton](http://getskeleton.com/), powered by [Jekyll](http://jekyllrb.com/) and freely
-hosted in [Github pages](https://pages.github.com/).
+---
 
+## 1. Replacing the current Jekyll site
 
-## View the live demo
+The repository is currently a fork of `jekyllt/vitae`, on the `master` branch,
+built by a GitHub Actions workflow that pushes to `gh-pages`. Swapping to plain
+HTML means removing the Jekyll machinery and telling Pages to serve `master`
+directly.
 
-[Vitae Live Demo](https://jekyllt.github.io/vitae)
+```bash
+git clone https://github.com/ja9yoonkim/ja9yoonkim.github.io
+cd ja9yoonkim.github.io
 
+# keep a way back
+git branch old-jekyll-site && git push -u origin old-jekyll-site
 
-## Screenshots
+# remove the Jekyll site
+git rm -r _config.yml _includes _layouts Gemfile index.html static .github CNAME robots.txt
 
-![resume page](https://raw.githubusercontent.com/jekyllt/vitae/gh-pages/assets/images/vitae_screen.png)
+# copy in the new files (this folder), then
+git add -A
+git commit -m "Replace Jekyll resume with hand-written site"
+git push
+```
 
+Then in **Settings → Pages**, set *Source* to **Deploy from a branch**, branch
+`master`, folder `/ (root)`. The `gh-pages` branch is no longer used and can be
+deleted once the new site is live.
 
-### Deployment
+Notes on the files being removed:
 
-There are several alternatives to building and deploying the site:
+- **`CNAME`** is empty, so no custom domain is lost.
+- **`robots.txt`** currently reads `Disallow: /`, which is what has been keeping
+  the site out of Google. The replacement in this folder allows crawling and
+  points at a sitemap. If you would rather stay unindexed, delete the new
+  `robots.txt` and `sitemap.xml` and keep the old one.
+- **`.github/`** holds the Actions workflow that built the Jekyll site. With
+  Pages serving `master` directly there is nothing left to build.
 
-1. build the site with [GitHub Actions](https://github.com/features/actions) which pushes 
-the resulting files (the contents of `_site/` or `../vitae-pages/`) 
-to the *gh-pages* branch. This is the approach that is currently used. See 
-[jekyll_build.yml](.github/workflows/jekyll_build.yml) for more details.
+---
 
-2. generate the site locally (more details below) and push the resulting
-HTML to a Github repository, that GitHub Pages then host;
+## 2. What still needs your content
 
-3. build the site with [travis-ci](https://travis-ci.org/) (with goodies from
-[jekyll-travis](https://github.com/mfenner/jekyll-travis)) automatically pushing the
-generated HTML files to a *gh-pages* branch.
+Search the folder for `EDIT` and `20XX` — those two strings mark everything
+that is a placeholder. There are only a handful:
 
-4. deploy the static website with Jekyll-compatible hosters, such as https://www.netlify.com/, that allow for deployment from the Github repo and publish the website using CDNs. Netlify has a free starter offer.
+| Where | What |
+|---|---|
+| `index.html` | Your photo — see below |
+| `cv.html` | Start years for the three appointments |
+| `cv.html` | Dissertation title and advisor (or delete that line) |
+| `cv.html` | Master's and bachelor's degrees |
+| `cv.html` | The CV PDF at `assets/cv.pdf`, or delete the download link |
+| `research.html` | Status lines for the three working papers (draft, R&R, presented at …) and PDF links where they exist |
+| `research.html` | The "Fields" line, if you would describe them differently |
+| `teaching.html` | Whether syllabi should be linked |
 
-For option **2)** simply clone this repository (*master branch*), and then run
-`bundle exec jekyll serve` inside the directory. Upload the resulting `_site/` (or `../vitae-pages/`)
-contents to your repository (*master branch* if uploading as your personal page
-(e.g. username.github.io) or *gh-pages branch* if uploading as a project page
-(as for the [demo](https://github.com/jekyllt/vitae/tree/gh-pages)).
+Two things worth checking rather than assuming:
 
-For option **3)** you will need to set up travis-ci for your personal fork. Briefly all you
-need then is to change your details in *[\_config.yml](_config.yml)* so that you can push
-to your github repo. You will also need to generate a secure key to add to your
-*[.travis.yml](.travis.yml)* (you can find more info on how to do it in that file).
-Also make sure you read the documentation from
-[jekyll-travis](https://github.com/mfenner/jekyll-travis). This approach has clear
-advantages in that you simply push your file changes to GitHub and all the HTML files
-are generated for you and pushed to *gh-pages*. Also you get to know if everything is
-still fine with your site builds. Don't hesitate to contact me if you still have any
-issues (see below about issue tracking).
+- **Email.** The old site listed `jaeyoonk@xjtu.edu.cn`, your Xi'an Jiaotong
+  address. That is carried over here. If you now use a `pusan.ac.kr` address,
+  change it in `index.html` and `cv.html`.
+- **Author order.** Both co-authored 2025 papers are listed with you first,
+  matching how RePEc indexes the JEBO paper. Correct the two `pub__authors`
+  lines in `index.html`, `research.html` and `cv.html` if that is wrong for the
+  Global Economic Review or Applied Economics Letters papers.
 
-## Issues and contributing
+### Your photo
 
-This install builds well with Ruby v2.6.3 and Jekyll v3.9.0. If you run into any problems please log them on the [issue tracker](https://github.com/jekyllt/vitae/issues).
+Crop a photo square, save it as `assets/img/portrait.jpg` (400×400 is plenty),
+and change one line in `index.html`:
 
-Feel free pull-request your patches and fixes.
+```html
+<img class="portrait" src="assets/img/portrait.jpg" alt="Jae-Yoon Kim" width="132" height="132">
+```
 
+The placeholder `avatar.svg` can then be deleted.
 
-## Thanks
+---
 
-A lot of the work had been already done by the Joao. Many thanks to him :smile:
+## 3. Adding a publication
 
-Profile picture from [pexels](https://www.pexels.com/photo/portrait-black-african-ethnicity-person-9494/).
+Each entry is one `<li>` in a `.pub-list`. Copy an existing one:
 
+```html
+<li>
+  <span class="pub__year">2026</span>
+  <div>
+    <h3 class="pub__title">Title of the paper</h3>
+    <p class="pub__authors"><span class="me">Kim, J.-Y.</span>, &amp; Coauthor, A.</p>
+    <p class="pub__venue">Journal Name, 12(3), 45–78</p>
+    <ul class="pub__links">
+      <li><a href="…">Publisher</a></li>
+      <li><a href="https://doi.org/…">DOI</a></li>
+      <li><a href="…">Replication package</a></li>
+    </ul>
+  </div>
+</li>
+```
 
-## Copyright & License
+`<span class="me">` is what sets your own name in bold. Published papers appear
+in two places — `research.html` and the "Published papers" block on
+`index.html` — plus a short line on `cv.html`.
 
-Copyright (C) 2015-2021 - Released under the MIT License.
+---
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+## 4. Adding a note
 
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+1. Copy `posts/template.html` to `posts/your-slug.html`.
+2. Change the `<title>`, the `<meta name="description">`, the `<h1>`, the
+   `<time>` element (both the `datetime` attribute and the visible text), and
+   the body.
+3. Add one `<li>` to the list in `posts.html`:
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+```html
+<li>
+  <time datetime="2026-10-01">2026-10-01</time>
+  <div>
+    <h3><a href="posts/your-slug.html">Your title</a></h3>
+    <p>One sentence that makes someone want to read it.</p>
+    <ul class="tags"><li>Tag</li></ul>
+  </div>
+</li>
+```
+
+4. Add the URL to `sitemap.xml`.
+
+### Margin notes
+
+The one typographic device worth knowing about. Inside `.article__body`:
+
+```html
+<aside class="marginnote">
+  <b>Lead-in.</b> The note itself.
+</aside>
+```
+
+It sits in the right-hand margin beside the paragraph it follows on wide
+screens, and collapses to an accented inline block on narrow ones — notes next
+to the sentence they belong to, rather than at the foot of the page.
+
+### Other pieces available inside a note
+
+- `<p class="lede">` — larger, softer opening paragraph
+- `<blockquote>` — pull quote
+- `<div class="code-wrap"><pre><code>…</code></pre></div>` — code, scrolls sideways on its own
+- `<div class="table-wrap"><table>…</table></div>` — table, same
+- `<td class="num">` — right-aligned, with figures that line up in columns
+
+---
+
+## 5. Design notes
+
+**Palette.** Light mode is a warm paper ground (`#FBFAF6`) with near-black ink
+(`#1B1C1A`) and a deep pine accent (`#1F6F63`). Dark mode uses a `#1C1D1B`
+ground with a lifted teal accent (`#6FC2B0`). Every colour is a CSS custom
+property at the top of `assets/css/style.css` — change the values in `:root`
+and the whole site follows. If you change `--accent`, change it in all three
+blocks (`:root`, the `prefers-color-scheme` block, and `[data-theme="dark"]`),
+and pick a darker version for light mode and a lighter, less saturated one for
+dark, or links will either vanish or glare.
+
+**Type.** EB Garamond for everything that is read — close in spirit to the ET
+Book face Tufte CSS uses. IBM Plex Sans for navigation, labels and metadata,
+IBM Plex Mono for years and figures. Korean falls back to Apple SD Gothic Neo /
+Malgun Gothic, so mixed Korean–English text stays readable. Fonts load from
+Google Fonts; delete that `<link>` from each `<head>` if you would rather have
+no external requests, and the stacks fall back to Palatino/Georgia.
+
+**Layout.** Running text is capped at 66 characters. Section labels sit in a
+9rem left-margin column and drop above the content below 46rem. Three theme
+states are handled: the reader's OS preference when nothing is stamped on
+`<html>`, and an explicit `data-theme` when they use the toggle, remembered in
+`localStorage`.
+
+---
+
+## 6. Files
+
+```
+index.html            front page — hero, published papers, teaching, contact
+research.html         published and working papers
+teaching.html         courses, grouped by institution
+posts.html            notes index
+cv.html               CV, with a link to the PDF
+404.html              not-found page (Pages picks this up automatically)
+posts/template.html   template note — copy this for new ones
+robots.txt            allows crawling (the old one blocked it)
+sitemap.xml           list of pages for search engines
+assets/css/style.css  the entire design
+assets/js/main.js     theme toggle, nothing else
+assets/img/           favicon and placeholder portrait
+.nojekyll             tells Pages to serve these files rather than build them
+```
+
+`.nojekyll` is empty and easy to miss, but it is what stops GitHub from trying
+to run Jekyll over the folder. Don't delete it.
